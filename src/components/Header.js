@@ -3,6 +3,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Authentication from './Authentication';
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -34,8 +36,7 @@ class Header extends React.Component {
           <Link to="/">Lifestyle</Link>
           <Link to="/">Shop</Link>
           <Link to="/">Contact</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/logout">Logout</Link>
+          <Authentication />
         </div>
         <div id="main" ref={this.main}>
           <span className="closer" onClick={this.openNav}>&#9776;</span>
