@@ -36,7 +36,6 @@ class Header extends React.Component {
           <Link to="/">Lifestyle</Link>
           <Link to="/">Shop</Link>
           <Link to="/">Contact</Link>
-          <Link to="/">Appointments</Link>
           <Authentication />
         </div>
         <div id="main" ref={this.main}>

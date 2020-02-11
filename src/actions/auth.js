@@ -63,11 +63,12 @@ export const registration = ({
 };
 
 export const logout = () => async dispatch => {
-  await Initialize.delete(`
-  ${LOGOUT}`,
-  {
-    withCredentials: true,
-  });
+  await Initialize.delete(
+    `${LOGOUT}`,
+    {
+      withCredentials: true,
+    },
+  );
   dispatch({ type: LOG_OUT });
   localStorage.setItem('isLoggedIn', false);
 };
