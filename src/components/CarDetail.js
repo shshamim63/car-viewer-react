@@ -13,12 +13,6 @@ const CarDetail = ({
   useEffect(() => {
     showCar(match.params.id);
   }, []);
-  console.log(authenticated);
-  if (selectedCar) {
-    const {
-      modelname, fee, payable, duration, representative, description,
-    } = selectedCar.attributes;
-  }
   return (
     <div>
       {selectedCar && (
@@ -81,7 +75,11 @@ const CarDetail = ({
               </p>
             </div>
             {authenticated && (
-            <Link to="">
+            <Link to={{
+              pathname: `/cars/${selectedCar.id}/book`,
+              state: { car: selectedCar },
+            }}
+            >
               <button className="btn btn-small btn-info">Book a test drive</button>
             </Link>
             )}
