@@ -1,5 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-const CarList = () => (<div>CarList</div>);
+import { getCarList } from '../actions/car';
+import Car from '../components/Car';
 
-export default CarList;
+const CarList = ({ cars, getCarList }) => {
+  useEffect(() => {
+    getCarList();
+  }, []);
+  return (
+    <div className="container">
+      <h1>Latest Car</h1>
+      <div className="row">
+        {cars.map(car => (
+          <Car key={car.id} car={car} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+CarList.propTypes = {
+  // cars: PropTypes.arrayOf(
+  //   PropTypes.shape({
+  //     bookId: PropTypes.string.isRequired,
+  //     title: PropTypes.string.isRequired,
+  //     category: PropTypes.string.isRequired,
+  //   }).isRequired,
+  // ).isRequired,
+  getCarList: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = state => ({
+  cars: state.car.getCars,
+});
+
+export default connect(mapStateToProps, { getCarList })(CarList);

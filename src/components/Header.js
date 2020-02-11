@@ -29,7 +29,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header>
+      <header className="header-float">
         <div ref={this.mySidenav} id="mySidenav" className="sidenav">
           <button type="submit" className="closebtn" onClick={this.preventcross}>&times;</button>
           <Link to="/models">Models</Link>

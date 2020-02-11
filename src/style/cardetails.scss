@@ -1,0 +1,43 @@
+.back-arrow-container {
+  max-width: 10%;
+  border: 2px solid #97BF10;
+  padding: 10px;
+  border-top-right-radius: 50px 50px;
+  border-bottom-right-radius: 50px 50px;
+  background-color: #97BF10;
+  margin-top: 20px;
+}
+h3 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 0.8rem;
+  padding: 6px 0;
+}
+.text-align-right {
+  text-align: right;
+}
+.back-arrow {
+  max-width: 80%;
+  height: 32px;
+  margin-left: 39%;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+
+.detail-header {
+  max-width: 100%;
+}
+
+.textbox {
+  width: 100%;
+}
+
+.odd {
+  background-color: #E3E2E5;
+}
