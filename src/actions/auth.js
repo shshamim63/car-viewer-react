@@ -30,8 +30,8 @@ export const login = ({ email, password }) => async dispatch => {
         email,
         password,
       },
-      withCredentials: true,
     },
+    { withCredentials: true },
   );
   if (response.data.status === 'created') {
     dispatch({ type: LOGIN_SUCCESS, payload: response.data.user });
@@ -52,8 +52,8 @@ export const registration = ({
         password,
         passwordConfirmation,
       },
-      withCredentials: true,
     },
+    { withCredentials: true },
   );
   if (response.data.status === 'created') {
     dispatch({ type: REGISTER_SUCCESS, payload: response.data.user });

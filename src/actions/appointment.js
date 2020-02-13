@@ -5,13 +5,13 @@ import { APPOINTMENTS } from '../constants';
 import { GET_APPOINTMENTS, CREATE_APPOINTMENT } from './types';
 
 export const getAppointments = () => async dispatch => {
-  const response = Initialize.get(
+  const response = await Initialize.get(
     `${APPOINTMENTS}`,
     {
       withCredentials: true,
     },
   );
-  if (response.data) {
+  if (response.data.data) {
     dispatch({
       type: GET_APPOINTMENTS,
       payload: response.data.data,

@@ -3,22 +3,25 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+
 import { createAppointment } from '../actions/appointment';
+import { CITY } from '../constants';
 
 const BookingForm = ({ car, user, createAppointment }) => {
   const [value, setValue] = useState({
     time: '',
     date: '2019-01-01',
+    city: '',
   });
-  const { time, date } = value;
+  const { time, date, city } = value;
   const handleSubmit = event => {
     event.preventDefault();
     const appointmentInfo = {
       date,
       time,
+      city,
       car_id: car.id,
     };
-    console.log(appointmentInfo);
     createAppointment(appointmentInfo);
     return (<Redirect to="/appointments" />);
   };
@@ -52,6 +55,18 @@ const BookingForm = ({ car, user, createAppointment }) => {
           required
         />
       </label>
+      <select
+        id="category"
+        name="city"
+        className="w-100 h-full"
+        onChange={e => handleChange(e)}
+      >
+        {
+          CITY.map(city => (
+            <option key={city} value={city}>{ city }</option>
+          ))
+        }
+      </select>
       <button type="submit" className="btn btn-small btn-info">Book a test drive</button>
     </form>
   );
