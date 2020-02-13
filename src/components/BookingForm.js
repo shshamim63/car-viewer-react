@@ -29,7 +29,6 @@ const BookingForm = ({
     };
     createAppointment(appointmentInfo);
     setValue({ ...value, redirect: true });
-    console.log(event.target);
   };
   const handleChange = event => {
     event.preventDefault();
@@ -37,7 +36,7 @@ const BookingForm = ({
   };
   return (
     <form onSubmit={e => handleSubmit(e)}>
-      { redirect ? (<Redirect to="/appointments" />) : '' }
+      {user && redirect ? (<Redirect to="/appointments" />) : '' }
       <label htmlFor="start">
         Select date:
         <input
@@ -77,6 +76,27 @@ const BookingForm = ({
       <button type="submit" className="btn btn-small btn-info">Book a test drive</button>
     </form>
   );
+};
+BookingForm.propTypes = {
+  createAppointment: PropTypes.func.isRequired,
+  car: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    attributes: PropTypes.shape({
+      modelname: PropTypes.string.isRequired,
+      fee: PropTypes.number.isRequired,
+      payable: PropTypes.number.isRequired,
+      duration: PropTypes.number.isRequired,
+      representative: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+
+  user: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    username: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+  }).isRequired,
 };
 const mapStateToProps = state => ({
   user: state.auth.user,

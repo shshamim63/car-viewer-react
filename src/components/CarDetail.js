@@ -55,7 +55,8 @@ const CarDetail = ({
                 <span className="alignright">
                   `£
                   {' '}
-                  {(selectedCar.attributes.payable * selectedCar.attributes.duration) + selectedCar.attributes.fee}
+                  {(selectedCar.attributes.payable
+                    * selectedCar.attributes.duration) + selectedCar.attributes.fee}
                   `
                 </span>
               </p>
@@ -84,7 +85,31 @@ const CarDetail = ({
     </div>
   );
 };
-
+CarDetail.defaultProps = {
+  selectedCar: null,
+  authenticated: null,
+};
+CarDetail.propTypes = {
+  showCar: PropTypes.func.isRequired,
+  selectedCar: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    attributes: PropTypes.shape({
+      modelname: PropTypes.string.isRequired,
+      fee: PropTypes.number.isRequired,
+      payable: PropTypes.number.isRequired,
+      duration: PropTypes.number.isRequired,
+      representative: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    }).isRequired,
+  }),
+  authenticated: PropTypes.bool,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
 const mapStateToProps = state => ({
   selectedCar: state.car.selectedCar,
   authenticated: state.auth.isAuthenticated,

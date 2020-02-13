@@ -22,13 +22,11 @@ const CarList = ({ cars, getCarList }) => {
 };
 
 CarList.propTypes = {
-  // cars: PropTypes.arrayOf(
-  //   PropTypes.shape({
-  //     bookId: PropTypes.string.isRequired,
-  //     title: PropTypes.string.isRequired,
-  //     category: PropTypes.string.isRequired,
-  //   }).isRequired,
-  // ).isRequired,
+  cars: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
   getCarList: PropTypes.func.isRequired,
 };
 

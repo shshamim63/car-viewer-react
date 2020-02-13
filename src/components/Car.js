@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import carImage from '../assets/carsphoto.jpeg';
 
 const Car = ({ car }) => {
@@ -20,6 +21,21 @@ const Car = ({ car }) => {
       </Link>
     </div>
   );
+};
+Car.propTypes = {
+  car: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    attributes: PropTypes.shape({
+      modelname: PropTypes.string.isRequired,
+      fee: PropTypes.number.isRequired,
+      payable: PropTypes.number.isRequired,
+      duration: PropTypes.number.isRequired,
+      representative: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+
 };
 
 export default Car;

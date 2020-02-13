@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
@@ -105,6 +104,9 @@ const Registration = ({ registration, isAuthenticated }) => {
   );
 };
 
+Registration.defaultProps = {
+  isAuthenticated: null,
+};
 Registration.propTypes = {
   registration: PropTypes.func.isRequired,
   isAuthenticated: PropTypes.bool,

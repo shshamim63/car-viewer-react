@@ -8,7 +8,7 @@ import Registration from './auth/Registration';
 import CarList from '../containers/CarList';
 import AppointmentList from '../containers/AppointmentList';
 import CarDetail from './CarDetail';
-import CarAppointBooking from './CarAppointBooking';
+
 
 const App = () => (
   <div className="container">
@@ -20,11 +20,6 @@ const App = () => (
       <Route path="/models" component={CarList} />
       <Route path="/cars/:id" component={CarDetail} />
       <Route path="/appointments" exact component={AppointmentList} />
-      <Route
-        exact
-        path="/cars/:id/book"
-        component={CarAppointBooking}
-      />
     </BrowserRouter>
   </div>
 );
