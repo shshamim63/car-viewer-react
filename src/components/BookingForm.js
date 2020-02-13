@@ -7,13 +7,18 @@ import PropTypes from 'prop-types';
 import { createAppointment } from '../actions/appointment';
 import { CITY } from '../constants';
 
-const BookingForm = ({ car, user, createAppointment }) => {
+const BookingForm = ({
+  car, user, createAppointment,
+}) => {
   const [value, setValue] = useState({
     time: '',
     date: '2019-01-01',
     city: '',
+    redirect: false,
   });
-  const { time, date, city } = value;
+  const {
+    time, date, city, redirect,
+  } = value;
   const handleSubmit = event => {
     event.preventDefault();
     const appointmentInfo = {
@@ -23,7 +28,8 @@ const BookingForm = ({ car, user, createAppointment }) => {
       car_id: car.id,
     };
     createAppointment(appointmentInfo);
-    return (<Redirect to="/appointments" />);
+    setValue({ ...value, redirect: true });
+    console.log(event.target);
   };
   const handleChange = event => {
     event.preventDefault();
@@ -31,6 +37,7 @@ const BookingForm = ({ car, user, createAppointment }) => {
   };
   return (
     <form onSubmit={e => handleSubmit(e)}>
+      { redirect ? (<Redirect to="/appointments" />) : '' }
       <label htmlFor="start">
         Select date:
         <input
