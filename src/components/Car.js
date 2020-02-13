@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import carimage from '../assets/carsphoto.jpeg';
+import carImage from '../assets/carsphoto.jpeg';
 
 const Car = ({ car }) => {
   const { modelname, description } = car.attributes;
@@ -11,7 +11,7 @@ const Car = ({ car }) => {
         to={`/cars/${id}`}
       >
         <div className="card">
-          <img src={carimage} className="card-img-top" alt="..." />
+          <img src={carImage} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{modelname}</h5>
             <p className="card-text">{description}</p>

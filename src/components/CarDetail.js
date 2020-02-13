@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { showCar } from '../actions/car';
 import carimage from '../assets/carsphoto.jpeg';
 import backArrow from '../assets/back-arrow.png';
+import BookingForm from './BookingForm';
 
 const CarDetail = ({
   match, selectedCar, authenticated, showCar,
@@ -75,13 +76,7 @@ const CarDetail = ({
               </p>
             </div>
             {authenticated && (
-            <Link to={{
-              pathname: `/cars/${selectedCar.id}/book`,
-              state: { car: selectedCar },
-            }}
-            >
-              <button className="btn btn-small btn-info">Book a test drive</button>
-            </Link>
+              <BookingForm car={selectedCar} />
             )}
           </div>
         </div>
