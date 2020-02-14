@@ -53,7 +53,19 @@
   border: none;
   color: coral;
 }
-  
+.logo {
+  @include media-breakpoint-up(md) {
+    width: 18vw;
+    margin-bottom: 3vh;
+    margin-top: 1vh;
+  }
+  @include media-breakpoint-between(xs,md) {
+    width: 40vw;
+    margin-bottom: 3vh;
+    margin-top: 1vh;
+  }
+}
+
 #main {
   transition: margin-left .5s;
   padding: 16px;

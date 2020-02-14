@@ -4,6 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Authentication from './Authentication';
+import logo from '../assets/logo.png';
 
 class Header extends React.Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class Header extends React.Component {
       <header className="header-float">
         <div ref={this.mySidenav} id="mySidenav" className="sidenav">
           <button type="submit" className="closebtn" onClick={this.preventcross}>&times;</button>
+          <img src={logo} className="logo" alt="logo" />
           <Link to="/models">Models</Link>
           <Link to="/">Lifestyle</Link>
           <Link to="/">Shop</Link>
