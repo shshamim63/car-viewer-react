@@ -23,7 +23,7 @@ const Authentication = ({ logout, isAuthenticated, history }) => {
     return (
       <div>
         <Link to="/appointments">Appointments</Link>
-        <button type="submit" onClick={handleClick}>Logout</button>
+        <button className="" type="submit" onClick={handleClick}>Logout</button>
       </div>
     );
   };
