@@ -7,12 +7,13 @@ const AppointmentItem = ({
   city,
   car,
 }) => (
-  <div>
-    <p>{date}</p>
-    <p>{time}</p>
-    <p>{city}</p>
-    <p>{car.modelname}</p>
-  </div>
+  <tr className="table-info">
+    <td>{date}</td>
+    <td>{time}</td>
+    <td>{city}</td>
+    <td>{car.modelname}</td>
+    <td>{car.representative}</td>
+  </tr>
 );
 
 AppointmentItem.propTypes = {
@@ -21,6 +22,7 @@ AppointmentItem.propTypes = {
   city: PropTypes.string.isRequired,
   car: PropTypes.shape({
     modelname: PropTypes.string.isRequired,
+    representative: PropTypes.string.isRequired,
   }).isRequired,
 };
 

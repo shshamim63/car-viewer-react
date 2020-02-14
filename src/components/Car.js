@@ -13,8 +13,8 @@ const Car = ({ car }) => {
       >
         <div className="card">
           <img src={carImage} className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title">{modelname}</h5>
+          <div className="card-body text-center">
+            <h5 className="card-title ">{modelname}</h5>
             <p className="card-text">{description}</p>
           </div>
         </div>

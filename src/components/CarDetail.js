@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import { showCar } from '../actions/car';
+import Header from './Header';
 import carimage from '../assets/carsphoto.jpeg';
 import backArrow from '../assets/back-arrow.png';
 import BookingForm from './BookingForm';
@@ -15,9 +16,10 @@ const CarDetail = ({
     showCar(match.params.id);
   }, []);
   return (
-    <div>
+    <div className="container">
+      <Header />
       {selectedCar && (
-        <div className="row">
+        <div className="row detail-space">
           <div className="col-md-9">
             <img src={carimage} className="card-img-top" alt="..." />
             <Link to="/models">
@@ -28,10 +30,10 @@ const CarDetail = ({
           </div>
           <div className="col-md-3">
             <div className="detail-header text-align-right">
-              <h3 className="">{selectedCar.attributes.modelname}</h3>
-              <p className="model-body">- £350 deposit upon any car purchase </p>
+              <h3 className="modelname">{selectedCar.attributes.modelname}</h3>
+              <p className="model-body model-body-text">- £350 deposit upon any car purchase </p>
             </div>
-            <div>
+            <div className="model-body-text">
               <p className="textbox alignleft odd">
                 Finance Fee
                 <span className="alignright">

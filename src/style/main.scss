@@ -3,6 +3,7 @@
 @import './navbar.scss';
 @import './cardetails.scss';
 @import './landing.scss';
+@import './carlist.scss';
 
 body {	
 	background: $white;
@@ -14,4 +15,12 @@ body {
 label {
   color: whitesmoke;
   font-weight: 400;
+}
+
+.color-black {
+  color: black;
+}
+
+.td {
+	color: black;
 }

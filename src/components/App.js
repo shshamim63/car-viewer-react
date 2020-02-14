@@ -13,7 +13,6 @@ import CarDetail from './CarDetail';
 const App = () => (
   <div>
     <BrowserRouter>
-      {/* <Header /> */}
       <Route path="/" exact component={Landing} />
       <Route path="/login" component={Login} />
       <Route path="/registration" component={Registration} />

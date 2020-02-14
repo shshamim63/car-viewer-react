@@ -6,7 +6,7 @@
 	position: relative;
 	overflow: hidden;
 	&, .row {
-		min-height: 610px;
+		min-height: 100vh;
 	}
 	&:before {
 		content: "";
@@ -27,7 +27,7 @@
 		}
 		@include media-breakpoint-up(md) {
 			font-size: 60px;
-    }
+	  }
     @include media-breakpoint-between(sm,md) {
 			font-size: 40px;
     }
