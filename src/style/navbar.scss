@@ -1,7 +1,7 @@
 .header-float {
   position: absolute;
   top: 0;
-  left: 2%;
+  left: 0%;
 }
 .sidenav {
   height: 100%;
@@ -21,6 +21,7 @@
   text-decoration: none;
   font-size: 20px;
   color: #565656;
+  font-weight: bolder;
   display: block;
   transition: 0.3s;
 }
@@ -53,6 +54,7 @@
 .closer {
     font-size:30px;
     cursor: pointer;
+    color: wheat;
 }
 
 .selected {

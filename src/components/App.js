@@ -11,9 +11,9 @@ import CarDetail from './CarDetail';
 
 
 const App = () => (
-  <div className="container">
+  <div>
     <BrowserRouter>
-      <Header />
+      {/* <Header /> */}
       <Route path="/" exact component={Landing} />
       <Route path="/login" component={Login} />
       <Route path="/registration" component={Registration} />

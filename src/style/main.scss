@@ -1,3 +1,12 @@
 @import '~bootstrap/scss/bootstrap.scss';
+@import './custom.setting.scss';
 @import './navbar.scss';
 @import './cardetails.scss';
+@import './landing.scss';
+
+body {	
+	background: $white;
+	line-height: 1.7;
+	font-size: 16px;
+	font-weight: 300;
+}
