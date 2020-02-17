@@ -9,7 +9,7 @@ import { logout } from '../actions/auth';
 const Authentication = ({ logout, isAuthenticated, history }) => {
   const handleClick = () => {
     logout();
-    history.push('/landing');
+    history.push('/');
   };
   const renderOnAuth = () => {
     if (!isAuthenticated) {
