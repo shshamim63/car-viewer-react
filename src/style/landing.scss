@@ -1,0 +1,40 @@
+.site-hero {
+	background-color: #ccc;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+	&, .row {
+		min-height: 100vh;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0,0,0,.5);
+	}
+	h1 {
+		font-weight: bolder;
+		margin-bottom: 20px;
+		display: block;
+		strong {
+			font-weight: 500;
+		}
+		@include media-breakpoint-up(md) {
+			font-size: 60px;
+	  }
+    @include media-breakpoint-between(sm,md) {
+			font-size: 40px;
+    }
+	}
+	h1 {
+		font-weight: 200;
+		color: $white;
+	}
+
+}
