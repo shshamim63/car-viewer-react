@@ -1,0 +1,30 @@
+.carlist-header {
+  @include media-breakpoint-up(md) {
+    font-size: 65px;
+    margin-top: 68px;
+  }
+  @include media-breakpoint-between(xs,md) {
+    font-size: 40px;
+    margin-top: 45px;
+  }
+}
+
+.carlist-header-text {
+  @include media-breakpoint-up(md) {
+    font-size: 25px;
+  }
+  @include media-breakpoint-between(sm,md) {
+    font-size: 15px;
+  }
+  color: #C8C8C8;
+  font-weight: 700;
+}
+
+h5 {
+  color: black;
+  font-weight: 500;
+}
+
+.card-text {
+  color: #B4B6B5;
+}
