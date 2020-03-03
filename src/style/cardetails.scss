@@ -1,0 +1,56 @@
+.back-arrow-container {
+  max-width: 10%;
+  border: 2px solid #97BF10;
+  padding: 10px;
+  border-top-right-radius: 50px 50px;
+  border-bottom-right-radius: 50px 50px;
+  background-color: #97BF10;
+  margin-top: 20px;
+}
+.modelname {
+  @include media-breakpoint-up(md) {
+    font-size: 25px;
+  }
+  @include media-breakpoint-between(xs,md) {
+    font-size: 18px;
+  }
+}
+.model-body-text {
+  @include media-breakpoint-up(md) {
+    font-size: 12px;
+  }
+  @include media-breakpoint-between(xs,md) {
+    font-size: 8px;
+  }
+}
+.text-align-right {
+  text-align: right;
+}
+.back-arrow {
+  max-width: 80%;
+  height: 32px;
+  margin-left: 39%;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+
+.detail-header {
+  max-width: 100%;
+}
+
+.textbox {
+  width: 100%;
+}
+
+.odd {
+  background-color: #E3E2E5;
+}
+
+.detail-space{
+  margin-top: 78px;
+}
