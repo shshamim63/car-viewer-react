@@ -52,7 +52,7 @@ Live version of the project [Live](https://car-viewer.netlify.com/)
 
 ## Usage
 
-Project interact with an API, created in Ruby on Rails. Here is the [link](git@github.com:shshamim63/car-viewer-api.git) of the repository.
+Project interact with an API, created in Ruby on Rails. Here is the [link](https://github.com/shshamim63/car-viewer-api) of the repository.
 
 ## Maintainers
 
