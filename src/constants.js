@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://car-viewer-api.herokuapp.com/';
+export const BASE_URL = process.env.REACT_APP_BASE_URL;
 export const REGISTER = 'registrations';
 export const STATUS = 'logged_in';
 export const LOGIN = 'sessions';
