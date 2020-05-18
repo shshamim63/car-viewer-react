@@ -7,9 +7,6 @@ import { GET_CARS, SHOW_CAR } from './types';
 export const getCarList = () => async dispatch => {
   const response = await Initialize.get(
     `${CARS}`,
-    {
-      withCredentials: true,
-    },
   );
   if (response.data.data) {
     dispatch({
@@ -22,9 +19,6 @@ export const getCarList = () => async dispatch => {
 export const showCar = id => async dispatch => {
   const response = await Initialize.get(
     `${CARS}/${id}`,
-    {
-      withCredentials: true,
-    },
   );
   if (response.data) {
     dispatch({

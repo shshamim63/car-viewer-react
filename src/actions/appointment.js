@@ -7,9 +7,6 @@ import { GET_APPOINTMENTS, CREATE_APPOINTMENT } from './types';
 export const getAppointments = () => async dispatch => {
   const response = await Initialize.get(
     `${APPOINTMENTS}`,
-    {
-      withCredentials: true,
-    },
   );
   if (response.data.data) {
     dispatch({
@@ -28,9 +25,6 @@ export const createAppointment = appointmentinfo => async dispatch => {
           ...appointmentinfo,
         },
       },
-    },
-    {
-      withCredentials: true,
     },
   );
   if (response.data.data) {

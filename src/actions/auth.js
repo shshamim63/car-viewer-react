@@ -10,9 +10,6 @@ import {
 export const loggedIn = () => async dispatch => {
   const response = await Initialize.get(
     `${STATUS}`,
-    {
-      withCredentials: true,
-    },
   );
   if (response.data.logged_in) {
     dispatch({
@@ -31,7 +28,6 @@ export const login = ({ email, password }) => async dispatch => {
         password,
       },
     },
-    { withCredentials: true },
   );
   if (response.data.status === 'created') {
     dispatch({ type: LOGIN_SUCCESS, payload: response.data.user });
@@ -53,8 +49,8 @@ export const registration = ({
         passwordConfirmation,
       },
     },
-    { withCredentials: true },
   );
+  console.log(response);
   if (response.data.status === 'created') {
     dispatch({ type: REGISTER_SUCCESS, payload: response.data.user });
     dispatch(loggedIn);
@@ -65,9 +61,6 @@ export const registration = ({
 export const logout = () => async dispatch => {
   await Initialize.delete(
     `${LOGOUT}`,
-    {
-      withCredentials: true,
-    },
   );
   dispatch({ type: LOG_OUT });
   localStorage.setItem('isLoggedIn', false);
