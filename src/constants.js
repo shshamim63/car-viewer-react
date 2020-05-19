@@ -1,4 +1,5 @@
 export const BASE_URL = process.env.REACT_APP_BASE_URL;
+export const PROXY_URL = 'https://yacdn.org/proxy/';
 export const REGISTER = 'registrations';
 export const STATUS = 'logged_in';
 export const LOGIN = 'sessions';
