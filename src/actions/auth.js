@@ -50,7 +50,6 @@ export const registration = ({
       },
     },
   );
-  console.log(response);
   if (response.data.status === 'created') {
     dispatch({ type: REGISTER_SUCCESS, payload: response.data.user });
     dispatch(loggedIn);
