@@ -8,7 +8,6 @@ import CarList from '../containers/CarList';
 import AppointmentList from '../containers/AppointmentList';
 import CarDetail from './CarDetail';
 
-
 const App = () => (
   <div>
     <BrowserRouter>

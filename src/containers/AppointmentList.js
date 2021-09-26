@@ -46,7 +46,7 @@ AppointmentList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
-      attributes: PropTypes.object.isRequired,
+      // attributes: PropTypes.object.isRequired,
     }).isRequired,
   ).isRequired,
 };
